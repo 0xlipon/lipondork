@@ -1,0 +1,58 @@
+Some Expensive Bug Bounty Google Dorks:
+=======================================
+[ Target Site: site:http://example.com ]
+
+PHP extension w/ parameters
+site:*.com ext:php inurl:?
+
+API Endpoints
+site:*.com inurl:api | site:*/rest | site:*/v1 | site:*/v2 | site:*/v3
+
+Juicy Extensions
+site:*.com ext:log | ext:txt | ext:conf | ext:cnf | ext:ini | ext:env | ext:sh | ext:bak | ext:backup | ext:swp | ext:old | ext:~ | ext:git | ext:svn | ext:htpasswd | ext:htaccess | ext:json
+
+High % inurl keywords
+inurl:conf | inurl:env | inurl:cgi | inurl:bin | inurl:etc | inurl:root | inurl:sql | inurl:backup | inurl:admin | inurl:php site:*.com
+
+Server Errors
+inurl:"error" | intitle:"exception" | intitle:"failure" | intitle:"server at" | inurl:exception | "database error" | "SQL syntax" | "undefined index" | "unhandled exception" | "stack trace" site:*.com
+
+XSS prone parameters
+inurl:q= | inurl:s= | inurl:search= | inurl:query= | inurl:keyword= | inurl:lang= inurl:& site:*.com
+
+
+Open Redirect prone parameters
+inurl:url= | inurl:return= | inurl:next= | inurl:redirect= | inurl:redir= | inurl:ret= | inurl:r2= | inurl:page= inurl:& inurl:http site:*.com
+
+SQLi Prone Parameters
+inurl:id= | inurl:pid= | inurl:category= | inurl:cat= | inurl:action= | inurl:sid= | inurl:dir= inurl:& site:*.com
+
+SSRF Prone Parameters
+inurl:http | inurl:url= | inurl:path= | inurl:dest= | inurl:html= | inurl:data= | inurl:domain= | inurl:page= inurl:& site:*.com
+
+LFI Prone Parameters
+inurl:include | inurl:dir | inurl:detail= | inurl:file= | inurl:folder= | inurl:inc= | inurl:locate= | inurl:doc= | inurl:conf= inurl:& site:*.com
+
+RCE Prone Parameters
+inurl:cmd | inurl:exec= | inurl:query= | inurl:code= | inurl:do= | inurl:run= | inurl:read= | inurl:ping= inurl:& site:*.com
+
+File upload endpoints
+site:*.com ”choose file”
+
+API Docs
+inurl:apidocs | inurl:api-docs | inurl:swagger | inurl:api-explorer site:*.com
+
+Login Pages
+inurl:login | inurl:signin | intitle:login | intitle:signin | inurl:secure site:*.com
+
+Test Environments
+inurl:test | inurl:env | inurl:dev | inurl:staging | inurl:sandbox | inurl:debug | inurl:temp | inurl:internal | inurl:demo site:*.com
+
+Sensitive Documents
+site:*.com ext:txt | ext:pdf | ext:xml | ext:xls | ext:xlsx | ext:ppt | ext:pptx | ext:doc | ext:docx intext:“confidential” | intext:“Not for Public Release” | intext:”internal use only” | intext:“do not distribute”
+
+Sensitive Parameters
+inurl:email= | inurl:phone= | inurl:password= | inurl:secret= inurl:& site:*.com
+
+Adobe Experience Manager (AEM)
+inurl:/content/usergenerated | inurl:/content/dam | inurl:/jcr:content | inurl:/libs/granite | inurl:/etc/clientlibs | inurl:/content/geometrixx | inurl:/bin/wcm | inurl:/crx/de site:*.com
