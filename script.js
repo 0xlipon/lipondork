@@ -3,13 +3,13 @@ document.getElementById('generateDorkButton').addEventListener('click', function
     var dorkCategory = document.getElementById('dorkSelect').value;
 
 var dorks = {
-'Advanced Dorks': [
+  'Advanced Dorks': [
     '-www -shop -share -ir -mfa',
     'ext:php inurl:?',
     'inurl:api | site:*/rest | site:*/v1 | site:*/v2 | site:*/v3',
     'ext:log | ext:txt | ext:conf | ext:cnf | ext:ini | ext:env | ext:sh | ext:bak | ext:backup | ext:swp | ext:old | ext:~ | ext:git | ext:svn | ext:htpasswd | ext:htaccess | ext:json',
     'inurl:conf | inurl:env | inurl:cgi | inurl:bin | inurl:etc | inurl:root | inurl:sql | inurl:backup | inurl:admin | inurl:php',
-    'inurl:'error' | intitle:'exception' | intitle:'failure' | intitle:'server at' | inurl:exception | 'database error' | 'SQL syntax' | 'undefined index' | 'unhandled exception' | 'stack trace'',
+    'inurl:\'error\' | intitle:\'exception\' | intitle:\'failure\' | intitle:\'server at\' | inurl:exception | \'database error\' | \'SQL syntax\' | \'undefined index\' | \'unhandled exception\' | \'stack trace\'',
     'inurl:q= | inurl:s= | inurl:search= | inurl:query= | inurl:keyword= | inurl:lang= inurl:&',
     'inurl:url= | inurl:return= | inurl:next= | inurl:redirect= | inurl:redir= | inurl:ret= | inurl:r2= | inurl:page= inurl:& inurl:http',
     'inurl:id= | inurl:pid= | inurl:category= | inurl:cat= | inurl:action= | inurl:sid= | inurl:dir= inurl:&',
@@ -28,7 +28,7 @@ var dorks = {
     'site:s3.dualstack.us-east-1.amazonaws.com',
     'site:dropbox.com/s',
     'site:box.com/s',
-    'site:docs.google.com inurl:'/d/'',
+    'site:docs.google.com inurl:"/d/"',
     'site:jfrog.io',
     'site:firebaseio.com',
     'site:pastebin.com',
@@ -37,13 +37,13 @@ var dorks = {
     'site:codepen.io',
     'inurl:apidocs | inurl:api-docs | inurl:swagger | inurl:api-explorer',
     'site:openbugbounty.org inurl:reports',
-    ''choose file'',
+    'choose file',
     'inurl:login | inurl:signin | intitle:login | intitle:signin | inurl:secure',
     'inurl:test | inurl:env | inurl:dev | inurl:staging | inurl:sandbox | inurl:debug | inurl:temp | inurl:internal | inurl:demo',
     'ext:txt | ext:pdf | ext:xml | ext:xls | ext:xlsx | ext:ppt | ext:pptx | ext:doc | ext:docx',
-    'intext:'confidential' | intext:'Not for Public Release' | intext:'internal use only' | intext:'do not distribute'',
-    'inurl:email= | inurl:phone= | inurl:password= | inurl:secret= inurl:&',
-],
+    'intext:\'confidential\' | intext:\'Not for Public Release\' | intext:\'internal use only\' | intext:\'do not distribute\'',
+    'inurl:email= | inurl:phone= | inurl:password= | inurl:secret= inurl:&'
+  ],
 'WordPress': [
     'inurl:"wp-content/"',
     'inurl:"wp-admin/"',
